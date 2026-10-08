@@ -4,53 +4,66 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Past Events | Amazing God International Ministries</title>
+<meta name="theme-color" content="#4b2a9a" />
 <link rel="icon" type="image/png" href="assets/favicon.png" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
-  *{box-sizing:border-box;margin:0}
-  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#f8fafc;color:#1e293b}
-  header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);height:96px;display:flex;align-items:center;justify-content:space-between;padding:0 24px}
-  .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit}
-  .brand img{width:64px;height:64px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px rgba(0,0,0,.2)}
-  .brand b{font-size:24px;display:block;line-height:1}
-  .brand span{font-size:13px;color:#4b5563}
-  .back{color:#4b5563;text-decoration:none;font-weight:500;font-size:15px}
-  .back:hover{color:#9333ea}
-  .hero{background:linear-gradient(180deg,#1e3a8a,#6b21a8);color:#fff;text-align:center;padding:56px 20px}
-  .hero h1{font-size:clamp(30px,5vw,48px)}
-  .hero p{margin-top:10px;opacity:.85}
-  main{max-width:1000px;margin:0 auto;padding:40px 20px 64px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
-  .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.08);display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
-  .card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.14)}
-  .card img{width:100%;height:auto;display:block}
-  .body{padding:18px 20px 22px}
-  .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:#e2e8f0;color:#475569;padding:3px 10px;border-radius:999px}
-  .card h2{font-size:20px;margin:10px 0 6px}
-  .card p{font-size:14px;color:#64748b}
-  .link{display:inline-block;margin-top:14px;font-weight:600;color:#7e22ce;font-size:14px}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;color:#26203d;background:#d6c8f7;line-height:1.5}
+a{color:#4b2a9a;text-decoration:none}
+a:hover{color:#0a6b5b}
+h1,h2,p{margin:0}
+.page{max-width:1440px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column;
+background:radial-gradient(900px 600px at 90% 4%,rgba(124,77,230,.50),transparent 65%),radial-gradient(800px 600px at 5% 60%,rgba(20,184,166,.36),transparent 65%),radial-gradient(900px 700px at 95% 90%,rgba(245,166,35,.42),transparent 65%),linear-gradient(180deg,#d6c8f7 0%,#e0d4f8 45%,#c4e8de 80%,#f6dca8 100%)}
+header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding:20px 64px}
+.brand{display:flex;align-items:center;gap:12px;color:#26203d}
+.brand img{width:84px;height:84px;border-radius:22px;object-fit:cover}
+.brand b{font-size:24px;line-height:1.1;display:block}
+.brand small{font-size:13px;color:#5b5478}
+.back{background:#fff;padding:12px 20px;border-radius:999px;font-weight:700;box-shadow:0 2px 12px rgba(75,42,154,.1)}
+.hero{padding:48px 64px 8px}
+.hero h1{font-size:56px;font-weight:800;line-height:1.05;letter-spacing:-.02em}
+.hero p{margin-top:12px;font-size:19px;color:#453e63}
+main{flex:1;padding:32px 64px 72px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.card{background:#fff;border-radius:28px;overflow:hidden;display:flex;flex-direction:column;color:#26203d;box-shadow:0 2px 12px rgba(75,42,154,.06);transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(75,42,154,.18);color:#26203d}
+.card img{width:100%;height:auto;display:block}
+.body{padding:22px 26px 28px;display:flex;flex-direction:column;gap:8px}
+.tag{align-self:flex-start;background:#ece6fb;color:#4b2a9a;font-size:12px;font-weight:800;letter-spacing:.08em;padding:5px 12px;border-radius:999px}
+.card h2{font-size:22px;font-weight:800}
+.card p{font-size:15px;color:#5b5478}
+.link{margin-top:6px;font-weight:700;color:#4b2a9a}
+footer{background:#26203d;color:#cfc8e8;padding:36px 64px;font-size:15px}
+footer b{color:#fff}
+a:focus-visible{outline:3px solid #4b2a9a;outline-offset:3px}
+@media (max-width:760px){header{padding:16px 20px}.brand img{width:64px;height:64px;border-radius:18px}.brand small{display:none}.hero{padding:28px 20px 0}.hero h1{font-size:38px}main{padding:24px 20px 48px}footer{padding:28px 20px}}
 </style>
 </head>
 <body>
+<div class="page">
 <header>
-  <a class="brand" href="./"><img src="assets/logo.png" alt="AGIM Logo" /><div><b>AGIM</b><span>Amazing God International Ministries</span></div></a>
-  <a class="back" href="./">&larr; Back to Home</a>
+<a class="brand" href="./"><img src="assets/logo.png" alt="AGIM logo" /><span><b>AGIM</b><small>Amazing God International Ministries</small></span></a>
+<a class="back" href="./">&larr; Back to Home</a>
 </header>
 <section class="hero">
-  <h1>Past Events</h1>
-  <p>A look back at gatherings we've celebrated together.</p>
+<h1>Past events</h1>
+<p>A look back at gatherings we've celebrated together.</p>
 </section>
 <main>
-  <div class="grid">
-    <a class="card" href="AGIC-WC-2026.html">
-      <img src="assets/WC.jpeg" alt="AGIC Women's Conference 2026" />
-      <div class="body">
-        <span class="tag">Concluded</span>
-        <h2>AGIC Women's Conference 2026</h2>
-        <p>Hosted by Amazing God International Church, USA.</p>
-        <span class="link">View event page &rarr;</span>
-      </div>
-    </a>
-  </div>
+<div class="grid">
+<a class="card" href="AGIC-WC-2026.html">
+<img src="assets/WC.jpeg" alt="AGIC Women's Conference 2026 poster" />
+<div class="body">
+<span class="tag">CONCLUDED</span>
+<h2>AGIC Women's Conference 2026</h2>
+<p>Hosted by Amazing God International Church, USA.</p>
+<span class="link">View event page &rarr;</span>
+</div>
+</a>
+</div>
 </main>
+<footer><b>Amazing God International Ministries</b> · Each One Preach One · India · USA · Global Online Community</footer>
+</div>
 </body>
 </html>

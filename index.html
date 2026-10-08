@@ -1,19 +1,468 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <meta name="generator" content="Amazing God International Ministries" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amazing God International Ministries</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Amazing God International Ministries - AGIM</title>
+<meta name="description" content="Amazing God International Ministries (AGIM) - Each One Preach One. A Christ-centered ministry committed to prayer, teaching, worship, and outreach across India, the USA, and the world." />
+<meta name="theme-color" content="#4b2a9a" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;color:#26203d;background:#d6c8f7;line-height:1.5}
+a{color:#4b2a9a;text-decoration:none}
+a:hover{color:#0a6b5b}
+img{max-width:100%}
+h1,h2,h3,p{margin:0}
+.page{max-width:1440px;margin:0 auto;min-height:100vh;
+background:radial-gradient(900px 600px at 90% 4%,rgba(124,77,230,.50),transparent 65%),radial-gradient(800px 600px at 5% 30%,rgba(20,184,166,.36),transparent 65%),radial-gradient(900px 700px at 95% 62%,rgba(245,166,35,.42),transparent 65%),radial-gradient(800px 600px at 5% 88%,rgba(219,90,170,.32),transparent 65%),linear-gradient(180deg,#d6c8f7 0%,#e0d4f8 40%,#c4e8de 75%,#f6dca8 100%)}
+.wrap{padding-left:64px;padding-right:64px}
+section{scroll-margin-top:12px}
 
-    <script type="module" crossorigin src="assets/index-dcac09d0.js"></script>
-    <link rel="stylesheet" href="assets/index-45225e2a.css">
+/* header */
+header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding:20px 64px;position:relative}
+.brand{display:flex;align-items:center;gap:12px;color:#26203d}
+.brand img{width:84px;height:84px;border-radius:22px;object-fit:cover}
+.brand b{font-size:24px;line-height:1.1;display:block}
+.brand small{font-size:13px;color:#5b5478}
+nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:15px;font-weight:600;background:#fff;padding:6px;border-radius:999px;box-shadow:0 2px 12px rgba(75,42,154,.1)}
+nav a{padding:10px 16px;border-radius:999px}
+nav a:hover{background:#f1ecfc}
+nav a.live-glow{background:#4b2a9a;color:#fff;padding:10px 20px;animation:liveGlow 2.4s ease-in-out infinite}
+nav a.live-glow:hover{background:#3d2180;color:#fff}
+@keyframes liveGlow{0%,100%{box-shadow:0 0 0 0 rgba(139,92,246,0),0 0 8px 1px rgba(139,92,246,.35)}50%{box-shadow:0 0 0 6px rgba(139,92,246,.14),0 0 22px 5px rgba(139,92,246,.55)}}
+.menu-btn{all:unset;display:none;cursor:pointer;width:48px;height:48px;border-radius:14px;background:#fff;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(75,42,154,.15)}
+.menu-btn:focus-visible,.btn:focus-visible,.m-card:focus-visible,nav a:focus-visible,.carousel button:focus-visible,.modal button:focus-visible{outline:3px solid #4b2a9a;outline-offset:3px}
+
+/* hero */
+.hero{padding:48px 64px 40px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.hero-main{grid-column:span 7;background:linear-gradient(135deg,#4b2a9a,#2d1a6e);color:#fff;border-radius:32px;padding:64px;display:flex;flex-direction:column;gap:24px;justify-content:center}
+.pill{align-self:flex-start;background:rgba(255,255,255,.16);padding:8px 16px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.06em}
+.hero-main h1{font-weight:800;font-size:72px;line-height:1.02;letter-spacing:-.025em}
+.hero-main p{font-size:20px;line-height:1.55;color:#e6defb;max-width:560px}
+.hero-main p b{color:#ffd27a}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:16px 26px;border-radius:16px;font-weight:800;font-family:inherit;font-size:16px;cursor:pointer;border:0}
+.btn-gold{background:#ffd27a;color:#26203d}
+.btn-gold:hover{background:#ffc95c;color:#26203d}
+.btn-ghost{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
+.btn-ghost:hover{background:rgba(255,255,255,.24);color:#fff}
+.btn-dark{background:#26203d;color:#fff}
+.btn-dark:hover{background:#3a3150;color:#fff}
+.hero-side{grid-column:span 5;display:flex;flex-direction:column;gap:24px}
+.week{background:#fff;border-radius:28px;padding:32px;flex:1}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.08em;color:#0a6b5b;text-transform:uppercase}
+.row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid #eee9fa}
+.row:last-child{border-bottom:0}
+.row b{font-size:16px}
+.row span{font-size:14px;color:#5b5478}
+.verse{background:#d9f3ec;border-radius:28px;padding:28px 32px}
+.verse q{display:block;font-size:19px;font-weight:700;line-height:1.4;color:#0a4d41;quotes:none}
+.verse span{display:block;margin-top:8px;font-size:14px;color:#0a6b5b;font-weight:700}
+
+/* stats */
+.stats{padding:0 64px 24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.stat{background:#fff;border-radius:24px;padding:28px 32px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.stat b{font-size:52px;font-weight:800;color:#4b2a9a;line-height:1}
+.stat span{font-size:16px;color:#5b5478}
+
+/* generic section */
+.sec{padding:72px 64px 24px}
+.sec h2{font-size:44px;font-weight:800;line-height:1.08;color:#26203d}
+.sec .sub{margin-top:12px;font-size:18px;color:#5b5478}
+.about{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.about h2{grid-column:span 5}
+.about div{grid-column:span 7;font-size:19px;line-height:1.65;color:#453e63;display:flex;flex-direction:column;gap:16px}
+
+/* ministries */
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:32px}
+.m-card{all:unset;box-sizing:border-box;cursor:pointer;background:#fff;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 12px rgba(75,42,154,.06);text-align:left;font-family:inherit;color:#26203d;transition:transform .2s ease,box-shadow .2s ease}
+.m-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(75,42,154,.18)}
+.m-photo{position:relative;height:170px;overflow:hidden;background:#ece6fb}
+.m-num{position:absolute;top:12px;left:12px;width:36px;height:36px;border-radius:12px;background:#fff;color:#4b2a9a;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(38,32,61,.15);z-index:2}
+.m-exp{position:absolute;top:12px;right:12px;width:32px;height:32px;border-radius:10px;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;z-index:2}
+.m-body{padding:24px 28px 28px;display:flex;flex-direction:column;gap:10px}
+.m-body h3{font-size:19px}
+.m-body p{font-size:15px;line-height:1.55;color:#5b5478}
+.track{display:flex;height:100%}
+.auto{animation-iteration-count:infinite;animation-timing-function:ease-in-out}
+.m-card:hover .auto{animation-play-state:paused}
+.slide{flex:0 0 100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:700;color:#4b2a9a;overflow:hidden}
+.slide img{width:100%;height:100%;object-fit:cover;display:block}
+.ph-a{background:linear-gradient(135deg,#e4d9fb,#d3c3f6)}
+.ph-b{background:linear-gradient(135deg,#d1f0e8,#bfe6dc)}
+.ph-c{background:linear-gradient(135deg,#fde9c2,#f8d9a0)}
+
+/* modal */
+.modal-bg{position:fixed;inset:0;z-index:100;background:rgba(38,32,61,.62);display:none;align-items:center;justify-content:center;padding:24px}
+.modal-bg.open{display:flex}
+.modal{position:relative;width:100%;max-width:880px;max-height:100%;overflow:auto;background:#fff;border-radius:32px;box-shadow:0 30px 80px rgba(38,32,61,.45)}
+.carousel{position:relative;height:380px;overflow:hidden;background:#ece6fb}
+.carousel .track{transition:transform .45s ease}
+.round{all:unset;cursor:pointer;position:absolute;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(38,32,61,.3)}
+.arrow{top:50%;margin-top:-24px;width:48px;height:48px}
+.arrow.l{left:16px}.arrow.r{right:16px}
+.close{top:16px;right:16px;width:44px;height:44px;border-radius:14px}
+.dots{position:absolute;left:0;right:0;bottom:16px;display:flex;justify-content:center;gap:8px}
+.dot{all:unset;cursor:pointer;height:10px;width:10px;border-radius:999px;background:rgba(75,42,154,.35);transition:width .25s ease,background .25s ease}
+.dot.on{width:28px;background:#4b2a9a}
+.modal-body{padding:32px 40px 40px;display:flex;flex-direction:column;gap:12px}
+.modal-body h3{font-size:34px;font-weight:800}
+.modal-body p{font-size:19px;line-height:1.6;color:#453e63}
+
+/* leadership */
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:32px}
+.leader{display:flex;flex-direction:column;gap:12px}
+.leader img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:24px;background:#ece6fb}
+.leader h3{font-size:22px;font-weight:800}
+.role{font-size:14px;font-weight:700;color:#0a6b5b;text-transform:uppercase;letter-spacing:.08em}
+.leader p{font-size:15px;line-height:1.6;color:#5b5478}
+.leader details{font-size:15px;line-height:1.6;color:#5b5478}
+.leader summary{cursor:pointer;font-weight:700;color:#4b2a9a;list-style:none;padding:4px 0}
+.leader summary::-webkit-details-marker{display:none}
+.leader details[open] summary{margin-bottom:8px}
+.leader details p+p{margin-top:10px}
+
+/* agic */
+.agic{background:#fff;border-radius:32px;padding:56px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.agic .l{grid-column:span 7;display:flex;flex-direction:column;gap:16px}
+.agic h2{font-size:44px;font-weight:800;line-height:1.08}
+.agic p{font-size:18px;line-height:1.6;color:#453e63}
+.visit{grid-column:span 5;background:#f5f2fc;border-radius:24px;padding:32px;font-size:17px;line-height:1.7}
+
+/* live */
+.live-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:32px}
+.stream{display:flex;flex-direction:column;gap:14px}
+.video{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:16/9;background:#26203d}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.tag{display:inline-block;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:800;color:#26203d}
+.tag.in{background:#ff6b5e}.tag.us{background:#7ee0c4}
+.stream h3{font-size:22px;font-weight:800}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.links a{padding:10px 18px;border-radius:999px;font-weight:700;font-size:14px}
+.links .go{background:#4b2a9a;color:#fff}.links .go:hover{background:#3d2180;color:#fff}
+.links .past{background:#fff;color:#4b2a9a}
+.note{margin-top:20px;color:#453e63;font-size:16px}
+
+/* prayer */
+.prayer{margin:72px 64px;background:#ffd27a;border-radius:32px;padding:64px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
+.prayer h2{font-size:44px;font-weight:800;color:#26203d}
+.prayer p{max-width:560px;font-size:19px;line-height:1.55;color:#3a3150}
+
+footer{background:#26203d;color:#cfc8e8;padding:48px 64px;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;font-size:15px;line-height:1.7}
+footer b{font-size:20px;color:#fff}
+footer a{color:#ffd27a}
+
+@media (prefers-reduced-motion:reduce){.auto,nav a.live-glow{animation:none}html{scroll-behavior:auto}}
+
+/* tablet */
+@media (max-width:1100px){
+.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+.hero-main,.hero-side{grid-column:span 12}
+.hero-main h1{font-size:56px}
+.about h2,.about div,.agic .l,.visit{grid-column:span 12}
+}
+/* phone */
+@media (max-width:760px){
+header{padding:16px 20px}
+.brand img{width:64px;height:64px;border-radius:18px}
+.brand small{display:none}
+.menu-btn{display:flex}
+nav{display:none;width:100%;flex-direction:column;align-items:stretch;border-radius:24px;padding:10px;gap:2px}
+nav.open{display:flex}
+nav a{padding:14px 16px}
+nav a.live-glow{text-align:center;margin-top:6px}
+.hero{padding:20px 20px 24px}
+.hero-main{padding:32px 24px;border-radius:24px}
+.hero-main h1{font-size:42px}
+.hero-main p{font-size:17px}
+.week{padding:24px}
+.stats{padding:0 20px 16px;grid-template-columns:1fr;gap:14px}
+.sec{padding:48px 20px 16px}
+.sec h2,.agic h2,.prayer h2{font-size:32px}
+.about div{font-size:17px}
+.grid4,.grid3,.live-grid{grid-template-columns:1fr}
+.agic{padding:28px 22px;border-radius:24px}
+.carousel{height:260px}
+.modal-body{padding:24px}
+.modal-body h3{font-size:26px}
+.modal-body p{font-size:17px}
+.prayer{margin:48px 20px;padding:40px 22px;border-radius:24px}
+footer{padding:36px 20px}
+}
+</style>
 </head>
-
 <body>
+<div class="page">
 
-    <div id="root"></div>
+<header>
+<a class="brand" href="#top"><img src="assets/logo.png" alt="AGIM logo" /><span><b>AGIM</b><small>Amazing God International Ministries</small></span></a>
+<button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26203d" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+</button>
+<nav id="mainNav" aria-label="Main">
+<a href="#about">About</a><a href="#ministries">Ministries</a><a href="#agic">AGIC USA</a><a href="#leadership">Leadership</a><a href="#prayer">Prayer</a><a href="#contact">Contact</a><a href="past-events.html">Past Events</a>
+<a class="live-glow" href="#live">Watch Live</a>
+</nav>
+</header>
 
+<main id="top">
+<section class="hero">
+<div class="hero-main">
+<span class="pill">INDIA · USA · ONLINE</span>
+<h1>Each one preach one.</h1>
+<p>Amazing God International Ministries: prayer, teaching, worship, and outreach. Every believer has a part in <b>sharing the gospel.</b></p>
+<div class="btns"><a class="btn btn-gold" href="#live">Watch live</a><a class="btn btn-ghost" href="#prayer">Request prayer</a></div>
+</div>
+<div class="hero-side">
+<div class="week">
+<span class="eyebrow">This week at AGIC</span>
+<div class="row"><b>Sunday Service</b><span>4:00 PM - 6:00 PM</span></div>
+<div class="row"><b>Bible Study (Zoom)</b><span>Thursday, 9:00 PM</span></div>
+<div class="row"><b>Fasting Prayer</b><span>2nd Saturday, 12 - 3 PM</span></div>
+<div class="row"><b>All Night Prayer</b><span>4th Friday, 11 PM - 5 AM</span></div>
+</div>
+<div class="verse"><q>&ldquo;By awesome deeds You answer us in righteousness.&rdquo;</q><span>- Psalm 65:5</span></div>
+</div>
+</section>
+
+<section class="stats" aria-label="At a glance">
+<div class="stat"><b>10+</b><span>Churches in India</span></div>
+<div class="stat"><b>15+</b><span>Pastors and ministers</span></div>
+<div class="stat"><b>3+</b><span>Nations reached</span></div>
+</section>
+
+<section id="about" class="sec about">
+<h2>We believe God is still near.</h2>
+<div>
+<p>Through prayer, worship, and living out what the Bible teaches, believers experience His presence and see Him move.</p>
+<p>In the USA, AGIM is represented by Amazing God International Church (AGIC), our church family in Brookeville, Maryland.</p>
+</div>
+</section>
+
+<section id="ministries" class="sec">
+<h2>How we serve</h2>
+<p class="sub">Serving believers and communities across India, the USA, and the world. Tap a card to see more.</p>
+<div class="grid4" id="ministryGrid"></div>
+</section>
+
+<section id="leadership" class="sec">
+<h2>Meet our leaders</h2>
+<p class="sub">Servant leaders devoted to the gospel of Jesus Christ, across nations.</p>
+<div class="grid3" id="leaderGrid"></div>
+</section>
+
+<section id="agic" class="sec">
+<div class="agic">
+<div class="l">
+<span class="eyebrow">AGIM in the USA</span>
+<h2>Amazing God International Church</h2>
+<p>We preach the gospel of Jesus Christ and help people grow in faith through worship services, Bible studies, and ministry programs. Our hope is that everyone who walks in meets God through prayer, worship, and a life shaped by the Bible.</p>
+</div>
+<div class="visit"><b>Visit us</b><br>12 High Street (Georgia Avenue)<br>Brookeville, MD 20833<br><a href="tel:7035776121">703-577-6121</a></div>
+</div>
+</section>
+
+<section id="live" class="sec">
+<h2>Worship with us online</h2>
+<p class="sub">AGIM India and AGIC USA, worshipping together online.</p>
+<div class="live-grid">
+<div class="stream">
+<div class="video"><iframe title="AGIM Live" loading="lazy" src="https://www.youtube.com/embed/videoseries?list=UUfhvmf604RKCwX_kOxv3ZoQ&autoplay=1&mute=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div><span class="tag in">LIVE - INDIA</span><h3>AGIM Live</h3></div>
+<div class="links"><a class="go" href="https://www.youtube.com/channel/UCfhvmf604RKCwX_kOxv3ZoQ/live" target="_blank" rel="noopener noreferrer">Watch Live</a><a class="past" href="https://www.youtube.com/@agimusa/streams" target="_blank" rel="noopener noreferrer">Past Streams</a></div>
+</div>
+<div class="stream">
+<div class="video"><iframe title="AGIC Live" loading="lazy" src="https://www.youtube.com/embed/videoseries?list=UUE-m8nYRwMpIGjmXLZTk5cw&autoplay=1&mute=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div><span class="tag us">LIVE - USA</span><h3>AGIC Live</h3></div>
+<div class="links"><a class="go" href="https://www.youtube.com/channel/UCE-m8nYRwMpIGjmXLZTk5cw/live" target="_blank" rel="noopener noreferrer">Watch Live</a><a class="past" href="https://www.youtube.com/@agiminternational/streams" target="_blank" rel="noopener noreferrer">Past Streams</a></div>
+</div>
+</div>
+<p class="note">AGIM streams Friday and Sunday. AGIC streams every Sunday.</p>
+</section>
+
+<section id="prayer" class="prayer">
+<h2>We would love to pray with you</h2>
+<p>If you need prayer, we'd be honored to stand with you. Send us a note and our prayer team will pray with you.</p>
+<a class="btn btn-dark" href="mailto:agimusa22@gmail.com">agimusa22@gmail.com</a>
+</section>
+</main>
+
+<footer id="contact">
+<div><b>Amazing God International Ministries</b><br>Each One Preach One · India · USA · Global Online Community</div>
+<div>AGIC (USA) · 12 High Street, Brookeville, MD 20833<br><a href="mailto:agimusa22@gmail.com">agimusa22@gmail.com</a> · <a href="tel:7035776121">703-577-6121</a><br>&copy; <span id="yr">2026</span> Amazing God International Ministries. All rights reserved.</div>
+</footer>
+</div>
+
+<div class="modal-bg" id="modalBg">
+<div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" id="modal">
+<div class="carousel" id="carousel">
+<div class="track" id="mTrack"></div>
+<button class="round arrow l" id="mPrev" type="button" aria-label="Previous photo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#26203d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+<button class="round arrow r" id="mNext" type="button" aria-label="Next photo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#26203d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+<div class="dots" id="mDots"></div>
+<button class="round close" id="mClose" type="button" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26203d" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+</div>
+<div class="modal-body"><span class="eyebrow" id="mNum"></span><h3 id="mTitle"></h3><p id="mDesc"></p></div>
+</div>
+</div>
+
+<script>
+/* ---------- content ---------- */
+/* To use real photos for a ministry, put image files in assets/ministries/ and list them in `photos`,
+   e.g. photos: ['assets/ministries/prayer-1.jpg','assets/ministries/prayer-2.jpg']. Empty = placeholders. */
+var MINISTRIES = [
+{t:'Prayer & Intercession',d:'Praying faithfully for individuals, families, churches, and nations.',photos:[]},
+{t:'Teaching & Discipleship',d:'Clear, Bible-based teaching that helps believers grow in faith and follow Christ more closely.',photos:[]},
+{t:"Women's Ministry",d:"Helping women grow in faith and reach others, under the vision to 'Gather My People.'",photos:[]},
+{t:"Children's Ministry",d:'Helping children know and love God from a young age.',photos:[]},
+{t:'Deliverance Ministry',d:'Praying with people who feel stuck or weighed down, trusting Jesus for freedom and healing.',photos:[]},
+{t:'Feed the Poor',d:"Showing Christ's love in practical ways by serving poor and vulnerable people in our communities.",photos:[]},
+{t:'Worship & Media',d:'Sharing worship and the Word with the world through live streaming, online platforms, and television.',photos:[]},
+{t:'Outreach & Missions',d:"Taking the gospel to people who haven't heard it, through street preaching, church planting, and mission work in many nations.",photos:[]}
+];
+var LEADERS = [
+ {
+  "name": "Pastor Hemanth K. Amara",
+  "role": "Senior Pastor & Founder",
+  "org": "AGIM & AGIC",
+  "location": "Olney, Maryland, USA",
+  "photo": "assets/pastor_jerry.jpg",
+  "short": "Founder of AGIM and AGIC. Following Christ since 1982, an ordained minister with an M.Div, he oversees about 10 churches and 15 pastors across India.",
+  "bio": [
+   "Pastor Hemanth Kumar Amara gave his life to Christ in 1982 and has been in ministry and pastoral care ever since. He earned a B.Com from Osmania University (1987), a Bachelor of Theology, and a Master of Divinity (2001) from Theological Seminary and Ministries, Hyderabad.",
+   "In 1990, he and a group of friends started Friends of Jesus Ministries in Hyderabad. It touched hundreds of young people and people from every walk of life, and a spiritual revival began as many surrendered their lives to Jesus.",
+   "Over the years he has been involved in nearly every part of ministry: personal evangelism, church planting, discipleship, tract distribution, street preaching, youth work, counseling, hospital and prison visits, and pastoral conferences.",
+   "He is married to Pastor Elizabeth Amara, who shares his passion for reaching people with the gospel, and they have three children. Today he serves as CEO and Founder of both AGIM and AGIC, overseeing about 10 churches and 15 pastors across India."
+  ]
+ },
+ {
+  "name": "Pastor Elizabeth Amara",
+  "role": "Pastor - Women's Ministry",
+  "org": "AGIM & AGIC",
+  "location": "Olney, Maryland, USA",
+  "photo": "assets/pastor_elizabeth.jpg",
+  "short": "MBA graduate, pursuing M.Div at Maryland Bible College & Seminary. Leads Women's Ministry with the vision to 'Gather My People.'",
+  "bio": [
+   "Pastor Elizabeth Amara holds an MBA and is currently working toward her Master of Divinity at Maryland Bible College & Seminary.",
+   "She has served as a pastor and teacher since AGIM and AGIC began, with a special focus on Women's Ministry and the vision to 'Gather My People.' Her heart is to help women grow spiritually and to reach people who haven't heard the gospel.",
+   "Her own life shows how faithful God is, and how He can change and use anyone who surrenders to Him."
+  ]
+ },
+ {
+  "name": "Dr. Swapna Penugula",
+  "role": "Ministry Coordinator - India",
+  "org": "AGIM India",
+  "location": "Telangana, India",
+  "photo": "assets/dr-swapna-1.jpg",
+  "short": "Worship leader and Bible teacher representing AGIM in Telangana, India, and ministry coordinator for AGIC and AGIM India.",
+  "bio": [
+   "Dr. Swapna Penugula represents AGIM in Telangana, India, and serves as a key link between the wider ministry and its churches in India.",
+   "She is a worship leader and Bible teacher who works among Christian women. As Ministry Coordinator for both AGIC and AGIM India, she keeps the vision connected across continents."
+  ]
+ }
+];
+
+/* ---------- helpers ---------- */
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+var ICON='<svg width="__S__" height="__S__" viewBox="0 0 24 24" fill="none" stroke="#4b2a9a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.8"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg>';
+var PH=['ph-a','ph-b','ph-c'];
+function slides(m){
+  if(m.photos&&m.photos.length){return m.photos.map(function(p,i){return '<div class="slide"><img src="'+esc(p)+'" alt="'+esc(m.t)+' photo '+(i+1)+'" loading="lazy"></div>';});}
+  return [1,2,3].map(function(n,i){return '<div class="slide '+PH[i]+'">'+ICON.replace(/__S__/g,'34')+'<span>Photo '+n+'</span></div>';});
+}
+
+/* ---------- ministry cards ---------- */
+var grid=document.getElementById('ministryGrid');
+MINISTRIES.forEach(function(m,i){
+  var s=slides(m), len=s.length;
+  var track=s.concat([s[0]]).join('');   // first slide repeated for a seamless loop
+  var b=document.createElement('button');
+  b.type='button'; b.className='m-card'; b.setAttribute('aria-label','Enlarge '+m.t);
+  b.innerHTML='<div class="m-photo"><div class="track auto" style="width:'+((len+1)*100)+'%;animation-name:slide'+len+';animation-duration:'+(len*3.3)+'s;animation-delay:-'+((i*1.3)%(len*3.3)).toFixed(1)+'s">'+track.replace(/class="slide/g,'style="flex:0 0 '+(100/(len+1))+'%" class="slide')+'</div>'
+   +'<span class="m-num">'+(i+1)+'</span>'
+   +'<span class="m-exp" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b2a9a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></div>'
+   +'<div class="m-body"><h3>'+esc(m.t)+'</h3><p>'+esc(m.d)+'</p></div>';
+  b.addEventListener('click',function(){openModal(i,b);});
+  grid.appendChild(b);
+});
+/* per-length keyframes so the loop works for any number of photos */
+(function(){
+  var lens={}; MINISTRIES.forEach(function(m){lens[(m.photos&&m.photos.length)||3]=1;});
+  var css='';
+  Object.keys(lens).forEach(function(L){
+    L=+L; var step=100/(L+1), a=[];
+    for(var k=0;k<L;k++){var from=k/L*100, hold=from+ (100/L)*0.75, to=(k+1)/L*100;
+      a.push(from.toFixed(2)+'%,'+hold.toFixed(2)+'%{transform:translateX(-'+(k*step).toFixed(3)+'%)}');}
+    a.push('100%{transform:translateX(-'+(L*step).toFixed(3)+'%)}');
+    css+='@keyframes slide'+L+'{'+a.join('')+'}';
+  });
+  var st=document.createElement('style'); st.textContent=css; document.head.appendChild(st);
+})();
+
+/* ---------- leaders ---------- */
+var lg=document.getElementById('leaderGrid');
+LEADERS.forEach(function(p){
+  var d=document.createElement('div'); d.className='leader';
+  d.innerHTML='<img src="'+esc(p.photo)+'" alt="'+esc(p.name)+'" loading="lazy">'
+   +'<h3>'+esc(p.name)+'</h3><span class="role">'+esc(p.role)+'</span><p>'+esc(p.short)+'</p>'
+   +'<details><summary>Read full bio</summary>'+p.bio.map(function(t){return '<p>'+esc(t)+'</p>';}).join('')+'</details>';
+  lg.appendChild(d);
+});
+
+/* ---------- modal with carousel ---------- */
+var bg=document.getElementById('modalBg'), track=document.getElementById('mTrack'), dotsEl=document.getElementById('mDots');
+var cur=0, cnt=3, timer=null, hover=false, skip=false, opener=null;
+function show(n){
+  cur=(n+cnt)%cnt;
+  track.style.transform='translateX(-'+(cur*100/cnt)+'%)';
+  Array.prototype.forEach.call(dotsEl.children,function(d,i){d.classList.toggle('on',i===cur);d.setAttribute('aria-current',i===cur?'true':'false');});
+}
+function openModal(i,from){
+  var m=MINISTRIES[i]; opener=from;
+  var s=slides(m); cnt=s.length;
+  track.style.width=(cnt*100)+'%';
+  track.innerHTML=s.join('').replace(/class="slide/g,'style="flex:0 0 '+(100/cnt)+'%" class="slide').replace(/width="34" height="34"/g,'width="64" height="64"');
+  dotsEl.innerHTML=''; for(var k=0;k<cnt;k++){(function(k){var d=document.createElement('button');d.type='button';d.className='dot';d.setAttribute('aria-label','Show photo '+(k+1));d.onclick=function(){skip=true;show(k);};dotsEl.appendChild(d);})(k);}
+  document.getElementById('mNum').textContent='MINISTRY '+(i+1);
+  document.getElementById('mTitle').textContent=m.t;
+  document.getElementById('mDesc').textContent=m.d;
+  track.style.transition='none'; show(0); void track.offsetWidth; track.style.transition='';
+  bg.classList.add('open'); document.body.style.overflow='hidden';
+  document.getElementById('mClose').focus();
+  clearInterval(timer); skip=true;
+  timer=setInterval(function(){ if(hover) return; if(skip){skip=false;return;} show(cur+1); },3000);
+}
+function closeModal(){
+  bg.classList.remove('open'); document.body.style.overflow=''; clearInterval(timer);
+  if(opener) opener.focus();
+}
+document.getElementById('mClose').onclick=closeModal;
+document.getElementById('mPrev').onclick=function(){skip=true;show(cur-1);};
+document.getElementById('mNext').onclick=function(){skip=true;show(cur+1);};
+bg.addEventListener('click',function(e){if(e.target===bg) closeModal();});
+var car=document.getElementById('carousel');
+car.addEventListener('mouseenter',function(){hover=true;});
+car.addEventListener('mouseleave',function(){hover=false;});
+document.addEventListener('keydown',function(e){
+  if(!bg.classList.contains('open')) return;
+  if(e.key==='Escape') closeModal();
+  else if(e.key==='ArrowLeft'){skip=true;show(cur-1);}
+  else if(e.key==='ArrowRight'){skip=true;show(cur+1);}
+});
+/* touch swipe */
+(function(){var x0=null;car.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+car.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){skip=true;show(cur+(dx<0?1:-1));}x0=null;});})();
+
+/* ---------- mobile menu ---------- */
+var mb=document.getElementById('menuBtn'), nav=document.getElementById('mainNav');
+mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Close menu':'Open menu');});
+nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');mb.setAttribute('aria-expanded','false');}});
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
