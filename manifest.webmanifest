@@ -1,0 +1,22 @@
+{
+  "name": "Amazing God International Ministries",
+  "short_name": "AGIM",
+  "description": "Each One Preach One. Prayer, teaching, worship, and outreach across India, the USA, and online.",
+  "id": "./",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#05060c",
+  "theme_color": "#05060c",
+  "categories": ["lifestyle", "education"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Watch Live", "short_name": "Live", "url": "./?source=pwa#live", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Request Prayer", "short_name": "Prayer", "url": "./?source=pwa#prayer", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
