@@ -498,15 +498,24 @@ document.addEventListener('keydown',function(e){
 (function(){var x0=null;car.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
 car.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){skip=true;show(cur+(dx<0?1:-1));}x0=null;});})();
 
-/* ---------- live streams: load the player only when asked ---------- */
-Array.prototype.forEach.call(document.querySelectorAll('.v-play'),function(b){
-  b.addEventListener('click',function(){
-    var f=document.createElement('iframe');
-    f.src=b.getAttribute('data-src'); f.title=b.getAttribute('aria-label');
-    f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; f.allowFullscreen=true;
-    b.parentNode.replaceChild(f,b);
-  });
-});
+/* ---------- live streams: auto-load (muted) when the section nears the screen ---------- */
+function loadPlayer(b){
+  if(!b||!b.parentNode) return;
+  var f=document.createElement('iframe');
+  f.src=b.getAttribute('data-src'); f.title=b.getAttribute('aria-label');
+  f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'; f.allowFullscreen=true; f.loading='lazy';
+  b.parentNode.replaceChild(f,b);
+}
+(function(){
+  var btns=Array.prototype.slice.call(document.querySelectorAll('.v-play'));
+  btns.forEach(function(b){b.addEventListener('click',function(){loadPlayer(b);});}); // still works as a manual fallback
+  var sec=document.getElementById('live');
+  function go(){ if(navigator.onLine!==false) btns.forEach(loadPlayer); }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){ if(en[0].isIntersecting){ io.disconnect(); go(); } },{rootMargin:'400px 0px'});
+    io.observe(sec);
+  } else { go(); }
+})();
 
 /* ---------- mobile menu ---------- */
 var mb=document.getElementById('menuBtn'), nav=document.getElementById('mainNav');
