@@ -1,6 +1,6 @@
 /* AGIM service worker: offline shell + runtime caching.
    Bump VERSION whenever the precached files change so visitors get the update. */
-const VERSION = 'agim-v9';
+const VERSION = 'agim-v10';
 const SHELL_CACHE = VERSION + '-shell';
 const RUNTIME_CACHE = VERSION + '-runtime';
 const FONT_CACHE = VERSION + '-fonts';
