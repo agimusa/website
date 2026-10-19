@@ -18,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{margin:0;background:#05060c;color:#f5f6fb;font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 h1,h2,h3,p{margin:0}
@@ -48,11 +48,11 @@ h2.h i{font-weight:500}
 /* progress + header */
 #prog{position:fixed;top:0;left:0;right:0;z-index:60;height:3px;background:rgba(255,255,255,.06)}
 #prog b{display:block;height:3px;width:0;background:linear-gradient(90deg,#60a5fa,#34d399)}
-header.top{position:fixed;top:3px;left:0;right:0;z-index:50;height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 max(6vw,env(safe-area-inset-left));background:rgba(6,8,18,.62);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(245,246,251,.12);box-shadow:0 1px 0 rgba(95,140,255,.18),0 10px 40px rgba(0,0,0,.25)}
+header.top{position:fixed;top:3px;left:0;right:0;z-index:50;height:92px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 max(6vw,env(safe-area-inset-left));background:rgba(6,8,18,.62);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(245,246,251,.12);box-shadow:0 1px 0 rgba(95,140,255,.18),0 10px 40px rgba(0,0,0,.25)}
 .brand{display:flex;align-items:center;gap:12px;min-width:0}
-.brand img{width:44px;height:44px;border-radius:50%;object-fit:cover;box-shadow:0 0 18px rgba(95,140,255,.45);flex:none}
+.brand img{width:64px;height:64px;border-radius:50%;object-fit:cover;box-shadow:0 0 18px rgba(95,140,255,.45);flex:none}
 .brand span{display:flex;flex-direction:column;line-height:1.15;min-width:0}
-.brand b{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600}
+.brand b{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600}
 .brand small{font-size:11px;letter-spacing:.14em;color:rgba(245,246,251,.5);white-space:nowrap}
 nav.main{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:500;color:rgba(245,246,251,.78)}
 nav.main a{padding:10px 14px;border-radius:100px}
@@ -66,8 +66,8 @@ nav.main a.cta{margin-left:10px;background:linear-gradient(120deg,#5f8cff,#1d3f9
 #rail a::after{content:'';position:absolute;inset:-8px}
 #rail a.on{background:var(--rc,#5f8cff);border-color:transparent;box-shadow:0 0 14px var(--rc,#5f8cff);transform:scale(1.5)}
 /* hero */
-#top{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:20px;padding-top:130px}
-#top .logo{width:104px;height:104px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px rgba(255,255,255,.18),0 0 60px 8px rgba(91,107,214,.55)}
+#top{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:20px;padding-top:150px}
+#top .logo{width:160px;height:160px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px rgba(255,255,255,.18),0 0 60px 8px rgba(91,107,214,.55)}
 #top .org{margin-top:10px;font-size:14px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(245,246,251,.72)}
 #top .abbr{font-size:12px;letter-spacing:.26em;color:rgba(245,246,251,.42)}
 #top h1{margin:8px 0 0;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(64px,12vw,164px);line-height:.92;letter-spacing:-.02em;background:linear-gradient(100deg,#fff 20%,#9aa8ff 80%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;padding-bottom:.08em}
@@ -193,6 +193,9 @@ nav.main a.cta{margin-left:10px;background:linear-gradient(120deg,#5f8cff,#1d3f9
 @media (max-width:720px){
  .sl{padding:100px 22px 72px}#about{padding-top:72px}
  .brand small{display:none}
+ .brand img{width:52px;height:52px}
+ header.top{height:80px}
+ #top .logo{width:128px;height:128px}
  .stats{grid-template-columns:1fr}.stat b{font-size:44px}
  .m-grid,.v-grid,.l-grid{grid-template-columns:1fr}
  .pray{padding:44px 24px;border-radius:26px}
@@ -217,7 +220,7 @@ nav.main a.cta{margin-left:10px;background:linear-gradient(120deg,#5f8cff,#1d3f9
 
 <main>
 <section id="top" class="sl hero">
-<img class="logo" src="assets/logo.png" alt="AGIM logo" width="104" height="104">
+<img class="logo" src="assets/logo.png" alt="AGIM logo" width="160" height="160">
 <span class="org">Amazing God International Ministries</span>
 <span class="abbr">AGIM &nbsp;&bull;&nbsp; AGIC &nbsp;&bull;&nbsp; AGIWM</span>
 <h1>Each One<br><i>Preach One</i></h1>
