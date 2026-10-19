@@ -176,10 +176,18 @@ nav.main a.cta{margin-left:10px;background:linear-gradient(120deg,#5f8cff,#1d3f9
 .modal-body p{font-size:16px;line-height:1.7;color:rgba(245,246,251,.78)}
 .modal-body p+p{margin-top:12px}
 .modal-body .role{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fb7185;margin-bottom:14px}
-.bio-top{display:flex;gap:20px;align-items:center;padding:26px 30px 0;position:relative}
-.bio-top img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:top;box-shadow:0 0 30px rgba(251,113,133,.4);flex:none}
-.bio-top .round.close{position:static;margin-left:auto;flex:none}
-.bio-top h3{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;line-height:1.05}
+
+/* bio modal (large, two-column) */
+.modal.bio{max-width:1020px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);max-height:92vh;overflow:hidden}
+.bio-photo{position:relative;min-height:100%;background:#1c0510}
+.bio-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.bio-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,#0b0f22 100%)}
+.bio-main{position:relative;padding:48px 48px 44px;overflow:auto;max-height:92vh}
+.bio-main .round.close{top:16px;right:16px}
+.bio-main .role{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fb7185;margin-bottom:12px;padding-right:50px}
+.bio-main h3{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,4.4vw,54px);font-weight:600;line-height:1.02;margin-bottom:22px}
+.bio-main p{font-size:17px;line-height:1.75;color:rgba(245,246,251,.82)}
+.bio-main p+p{margin-top:14px}
 /* responsive */
 @media (max-width:1100px){.m-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about-grid .a1,.about-grid .a2{grid-column:span 12}.agic-l,.agic-r{grid-column:span 12}.l-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:1000px){
@@ -200,7 +208,7 @@ nav.main a.cta{margin-left:10px;background:linear-gradient(120deg,#5f8cff,#1d3f9
  .m-grid,.v-grid,.l-grid{grid-template-columns:1fr}
  .pray{padding:44px 24px;border-radius:26px}
  .modal-body{padding:22px 22px 28px}.modal-body h3{font-size:32px}
- .bio-top{padding:22px 22px 0}.bio-top img{width:76px;height:76px}.bio-top h3{font-size:26px}
+ .modal.bio{grid-template-columns:1fr;overflow:auto}.bio-photo{min-height:0;height:340px}.bio-photo::after{background:linear-gradient(to bottom,transparent 65%,#0b0f22 100%)}.bio-main{padding:26px 22px 32px;max-height:none;overflow:visible}.bio-main .round.close{position:fixed;top:30px;right:34px;z-index:5}.bio-main .role{padding-right:0}.bio-main h3{font-size:36px}.bio-main p{font-size:16px}
  .round{width:40px;height:40px}.round.arrow{margin-top:-20px}
  .outro{padding-left:22px;padding-right:22px}
 }
@@ -319,9 +327,15 @@ nav.main a.cta{margin-left:10px;background:linear-gradient(120deg,#5f8cff,#1d3f9
 </div>
 
 <div class="modal-bg" id="bioBg">
-<div class="modal" role="dialog" aria-modal="true" aria-labelledby="bName">
-<div class="bio-top"><img id="bImg" src="" alt=""><div><h3 id="bName"></h3></div><button class="round close" id="bClose" type="button" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b0f22" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>
-<div class="modal-body" style="padding-top:18px"><div class="role" id="bRole"></div><div id="bText"></div></div>
+<div class="modal bio" role="dialog" aria-modal="true" aria-labelledby="bName">
+<div class="bio-photo"><img id="bImg" src="" alt=""></div>
+<div class="bio-main">
+<button class="round close" id="bClose" type="button" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b0f22" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+<div class="role" id="bRole"></div>
+<h3 id="bName"></h3>
+<div id="bText"></div>
+</div>
+</div>
 </div>
 </div>
 
